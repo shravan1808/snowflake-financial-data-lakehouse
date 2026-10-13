@@ -1,0 +1,4 @@
+# Large datasets
+data/
+*.csv
+*.zip
