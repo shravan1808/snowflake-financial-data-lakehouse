@@ -1,0 +1,29 @@
+definition_version: 2
+entities:
+  streamlit_app:
+    type: streamlit
+    meta:
+      use_mixins:
+        - streamlit_shared
+    identifier:
+      name: VS5UNP45FLBPM1RU
+      database: FINANCIAL_LAKEHOUSE_DB
+      schema: GOLD_ANALYTICS
+  Target 1:
+    type: streamlit
+    meta:
+      use_mixins:
+        - streamlit_shared
+      role: ACCOUNTADMIN
+    identifier:
+      name: ''
+mixins:
+  streamlit_shared:
+    artifacts:
+      - pyproject.toml
+      - streamlit_app.py
+      - .streamlit/config.toml
+    title: streamlit_app.py
+    query_warehouse: COMPUTE_WH
+    compute_pool: SYSTEM_COMPUTE_POOL_CPU
+    main_file: streamlit_app.py
